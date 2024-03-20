@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default function Favourite() {
-  return <div>Favourite</div>;
+  return <div className="screen-container">Favourite</div>;
 }
