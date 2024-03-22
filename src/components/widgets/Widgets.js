@@ -7,7 +7,6 @@ export default function Widgets({ artistId }) {
   const [similar, setSimilar] = useState([]);
   const [featured, setFeatured] = useState([]);
   const [newRelease, setNewRelease] = useState([]);
-  console.log(artistId);
 
   useEffect(() => {
     if (artistId) {

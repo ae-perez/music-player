@@ -9,7 +9,13 @@ export default function Controls({
   setIsPlaying,
   handleNext,
   handlePrev,
+  handlePlayButtonClick,
 }) {
+  const handleClick = () => {
+    setIsPlaying(!isPlaying); // Toggle isPlaying state
+    handlePlayButtonClick(); // Call handlePlayButtonClick if needed
+  };
+
   return (
     <IconContext.Provider value={{ size: '35px', color: '#C4D0E3' }}>
       <div className="controls-wrapper flex">
@@ -20,7 +26,8 @@ export default function Controls({
           className={
             isPlaying ? 'play-pause-btn flex active' : 'play-pause-btn flex'
           }
-          onClick={() => setIsPlaying(!isPlaying)}
+          // onClick={() => setIsPlaying(!isPlaying)}
+          onClick={handleClick}
         >
           {isPlaying ? <FaPause /> : <IoPlay />}
         </div>
